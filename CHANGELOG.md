@@ -234,7 +234,7 @@
 * Pretty-print ZSON type values (#3819)
 * Allow conversion of time values to other numeric types (#3816)
 * Remove scaling from duration and time conversions (#3809)
-* Add [`over` expressions](https://zed.brimdata.io/docs/language/lateral-subquerieslateral-expressions) (#3797)
+* Add [`over` expressions](https://zed.brimdata.io/docs/language/lateral-subqueries#lateral-expressions) (#3797)
 * Add `-where` flag to [`zed delete`](https://zed.brimdata.io/docs/commands/zed#24-delete) (#3791)
 * Allow base62 object IDs in lake API request bodies (#3783)
 * Remove `let` operator and [`over` operator](https://zed.brimdata.io/docs/language/operators/over)'s `as` clause (#3785)
