@@ -1,4 +1,4 @@
-## v1.18.0
+## [v1.18.0](https://github.com/brimdata/super/commit/c1da204ac083642ef4b6aa1bec7e8565eb678730)
 * Improve the error message shown to a user when a `zed` command is run but there's no pool/branch set for use (#5198)
 * Improve the performance of the [`load` operator](https://zed.brimdata.io/docs/language/operators/load) by removing an unnecessary/inefficient merge (#5200)
 * Improve the [`sort` operator](https://zed.brimdata.io/docs/language/operators/sort) to allow different ordering for each key (#5203, #5262)
@@ -16,7 +16,7 @@
 * Fix an issue where comparisons against union values produced incorrect results (#5210)
 * Fix an issue where concurrent Zed lake operations could cause a service crash (#5279)
 
-## v1.17.0
+## [v1.17.0](https://github.com/brimdata/super/commit/c81efd6a868a855ed6b7de983491b5f3a5832d19)
 * Improve the performance of multi-pool searches (e.g., `from * | "MyFilter"`) (#5174)
 * Reduce the amount of memory consumed by the [`merge` operator](https://zed.brimdata.io/docs/language/operators/merge) and merge-dependent operations, such as compaction (#5171)
 * Add the `-pool` flag to [`zed manage`](https://zed.brimdata.io/docs/commands/zed#manage) (#5164)
@@ -25,7 +25,7 @@
 * Fix a parser issue with collisions between the names of [user-defined operators](https://zed.brimdata.io/docs/language/statements#operator-statements) and [functions](https://zed.brimdata.io/docs/language/statements#func-statements) and some built-in [operators](https://zed.brimdata.io/docs/language/operators) (#5161)
 * Fix an issue where using `null` values in math caused a panic (#5163)
 
-## v1.16.0
+## [v1.16.0](https://github.com/brimdata/super/commit/eff539fbfcfd10f136038de1a52192819137b2c1)
 * Improve ZNG scanning performance (#5101, #5103)
 * Improve the error message shown when `zq` is invoked with a single argument that's not a valid query and doesn't contain a source (#5119)
 * Update [Zeek integration docs](https://zed.brimdata.io/docs/integrations/zeek), including [reference shaper](https://zed.brimdata.io/docs/integrations/zeek/shaping-zeek-ndjson) changes for [Zeek v6.2.0](https://github.com/zeek/zeek/releases/tag/v6.2.0) data (#5106)
@@ -39,7 +39,7 @@
 * Fix an issue where stateful expressions inside [user-defined functions](https://zed.brimdata.io/docs/language/statements#func-statements) could generate incorrect results (#5093)
 * Fix an issue where the [Go library examples](https://zed.brimdata.io/docs/libraries/go) failed to compile and run (#5095, #5147)
 
-## v1.15.0
+## [v1.15.0](https://github.com/brimdata/super/commit/2a487ee2a63ed09700bb26f70f08324244227cc2)
 * Improve the error message when reading NDJSON data with an incomplete last line (#5055)
 * Improve the error message when math operators are applied to complex types (e.g., attempting to concatenate arrays with `+`) (#5059)
 * Improve the error message when `zq` is called with a single argument that's neither a file nor a valid Zed query (#5053)
@@ -51,13 +51,13 @@
 * Fix an issue where using `over` in an expression context caused a panic (#5079)
 * Fix an issue where math and [`join`](https://zed.brimdata.io/docs/language/operators/join) matches involving `float16` and `float32` types could yield incorrect results (#5086)
 
-## v1.14.0
+## [v1.14.0](https://github.com/brimdata/super/commit/709b64e4f819ff03652af4f1755fdd3960514dca)
 * Add the `-manage` flag to [`zed serve`](https://zed.brimdata.io/docs/commands/zed#serve) to have the Zed service process initiate [maintenance tasks](https://zed.brimdata.io/docs/commands/zed#manage) on a regular interval (#5017)
 * Fix an issue where the [Python client](https://zed.brimdata.io/docs/libraries/python) would not allow loading to a pool with `/` in its name (#5020)
 * Fix an issue where pools with KSUID-like names could not be accessed by name (#5019)
 * Fix a reference counting issue that could cause a Zed service panic (#5029, #5030)
 
-## v1.13.0
+## [v1.13.0](https://github.com/brimdata/super/commit/4eba82a1304f86997326279cfbeeb7449f415571)
 * Improve the error message when [`zed manage -monitor`](https://zed.brimdata.io/docs/commands/zed#manage) is attempted on a local lake (#4979)
 * The [`zed serve`](https://zed.brimdata.io/docs/commands/zed#serve) log now includes version, storage root, and auth info at startup (#4988)
 * Add [docs for the `zed manage` command](https://zed.brimdata.io/docs/commands/zed#manage) to compact data for improved performance (#4961)
@@ -71,7 +71,7 @@
 * Fix an issue where parsing of `type` literals inside of `type` literals was incorrectly permitted (#4996)
 * Fix an issue where the [`grok()` function](https://zed.brimdata.io/docs/language/functions/grok) would panic when encountering optional fields (#5010)
 
-## v1.12.0
+## [v1.12.0](https://github.com/brimdata/super/commit/371645806d3c3712c25d0b6057468491f1387ca2)
 * Zed CSV output now handles records with the same field names but different types (#4889)
 * The [`grep()` function](https://zed.brimdata.io/docs/language/functions/grep) now accepts variables as pattern arguments (#4887)
 * Prevent the creation of multi-key pools in Zed lakes (support for this will be added later) (#4903)
@@ -85,10 +85,10 @@
 * Fix a panic that occurred if the [`from` operator](https://zed.brimdata.io/docs/language/operators/from) was attempted in Zed run with `zq` (#4936)
 * Fix an "invalid union tag" panic that could occur when using the [`collect()` aggregate function](https://zed.brimdata.io/docs/language/aggregates/collect) (#4932)
 
-## v1.11.1
+## [v1.11.1](https://github.com/brimdata/super/commit/e9be7a0b3d88c01b67ed2cebbea592396bcef882)
 * Fix an issue where loading and querying certain data caused a panic (#4877)
 
-## v1.11.0
+## [v1.11.0](https://github.com/brimdata/super/commit/cd36eaab38d4c0c8a607ef4fa561b0b43f80b1dc)
 * Introduce new logic for the `zed` CLI command to [locate the lake](https://zed.brimdata.io/docs/commands/zed#locating-the-lake) (#4758, #4787, #4811)
 * [Cast expressions](https://zed.brimdata.io/docs/language/expressions#casts) now behave more like function calls (#4805)
 * Reduce the amount of memory needed to store a Zed value (#4812)
@@ -102,7 +102,7 @@
 * Fix an issue where running `zed` commands on a system with many CPU cores caused an internal error (#4826)
 * Fix an encoding issue that caused different [map values](https://zed.brimdata.io/docs/formats/zed#24-map) to be rendered the same in Zui (#4853)
 
-## v1.10.0
+## [v1.10.0](https://github.com/brimdata/super/commit/a5b76573a29b760cf9ceb1414d74e27ded0bf244)
 * Sorting is now performed automatically on [`join`](https://zed.brimdata.io/docs/language/operators/join) inputs when needed (explicit [`sort`](https://zed.brimdata.io/docs/language/operators/sort) no longer required) (#4770)
 * Various query performance improvements (#4736, #4737, #4739, #4740, #4783, #4785)
 * [`join`](https://zed.brimdata.io/docs/language/operators/join) now works correctly when data inputs are sorted in descending order (#4767)
@@ -114,7 +114,8 @@
 * Add an example to the [`cut` docs](https://zed.brimdata.io/docs/language/operators/cut) that includes setting a default value for a field (#4773, #4776)
 * Boolean `not` and `!` now both work the same in [expressions](https://zed.brimdata.io/docs/language/expressions#logic) and [search expressions](https://zed.brimdata.io/docs/language/search-expressions#boolean-logic) (#4768)
 * The [`zed` command](https://zed.brimdata.io/docs/commands/zed) now returns a hint mentioning [`init`](https://zed.brimdata.io/docs/commands/zed#init) if no lake exists at the expected path (#4786)
-## v1.9.0
+
+## [v1.9.0](https://github.com/brimdata/super/commit/a4a2b64e3277f4fb6509722ade9b9639a8cd2a0f)
 * The [Zed Language Overview docs](https://zed.brimdata.io/docs/language/overview) have been split into multiple sections (#4576)
 * Add support for [user-defined operators](https://zed.brimdata.io/docs/language/statements#operator-statements) (#4417, #4635, #4646, #4644, #4663, #4674, #4698, #4702, #4716)
 * Add experimental support to the [`get` operator](https://zed.brimdata.io/docs/language/operators/get) for customized methods, headers, and body (#4572)
@@ -126,12 +127,12 @@
 * Fix an issue where the [Zed Python client](https://zed.brimdata.io/docs/libraries/python) was incorrectly returning `False` for all `bool` values (#4706)
 * Fix an issue where the `!=` operator was not returning correct results when comparing certain types (#4704)
 
-## v1.8.1
+## [v1.8.1](https://github.com/brimdata/super/commit/fcb4ff98ba633396a1dac92bb677e8004160df08)
 * Send an HTTP 400 response instead of HTTP 500 for attempted deletes that find nothing to delete (#4618)
 * Send an HTTP 400 response instead of HTTP 500 for queries that parse ok but fail to compile, such as searches lacking a leading [`from`](https://zed.brimdata.io/docs/language/operators/from) (#4620)
 * Fix an issue where some regexps were not matching pool names when used in a `from` (#4619)
 
-## v1.8.0
+## [v1.8.0](https://github.com/brimdata/super/commit/c4f6d46454232ee9a4ca999758136d3f75c0ca0d)
 * Improve [`sort`](https://zed.brimdata.io/docs/language/operators/sort) performance for `duration` and `time` types (#4469)
 * Improve performance and reduce memory used by `zed load` and `sort` on multi-GB inputs (#4476, #4484)
 * Fix an issue where [meta-queries](https://zed.brimdata.io/docs/commands/zed#meta-queries) were incorrectly returning results (#4474)
@@ -148,14 +149,14 @@
 * Improve JSON output for Zed [maps](https://zed.brimdata.io/docs/formats/zed#24-map) (#4589)
 * Add the [`zed vacuum`](https://zed.brimdata.io/docs/commands/zed#215-vacuum) command (#4577, #4598, #4600)
 
-## v1.7.0
+## [v1.7.0](https://github.com/brimdata/super/commit/e5ad1f9998f654496b3038bb9433ca154d01edbc)
 * Add [`regexp_replace()`](https://zed.brimdata.io/docs/language/functions/regexp_replace) function for replacing regular expression matches in a string (#4435, #4449)
 * Add [documentation](https://zed.brimdata.io/docs/integrations/zed-lake-auth) showing how to configure Auth0 for authenticated access to a Zed lake service (#4439)
 * Fix an issue where elements of map could not be accessed if the key was of a union type (#4447)
 * Allow [`head`](https://zed.brimdata.io/docs/language/operators/head) operator to accept an expression (#4451)
 * Allow [`tail`](https://zed.brimdata.io/docs/language/operators/tail) operator to accept an expression (#4464)
 
-## v1.6.0
+## [v1.6.0](https://github.com/brimdata/super/commit/6e15e99971b2c3f5ebb447457c18a7cad4ebe09a)
 
 > ## Note: Changes to the Zed lake storage format
 > 
@@ -175,7 +176,7 @@
 * Add docs for the [`pass` operator](https://zed.brimdata.io/docs/language/operators/pass) and an example of [`join` on more than two inputs](https://zed.brimdata.io/docs/tutorials/join#joining-more-than-two-inputs) (#4403)
 * When the result of [`summarize`](https://zed.brimdata.io/docs/language/operators/summarize) is a single value and there is no field name specified, the output is now that single value rather than a single-field record containing that value (#4420)
 
-## v1.5.0
+## [v1.5.0](https://github.com/brimdata/super/commit/963863bdce7bac0e4248aa82b7b81979a57a7663)
 * Add `float16` primitive type (#4301)
 * Add segment compression to the [VNG](https://zed.brimdata.io/docs/formats/vng) format (#4299)
 * Add `-unbuffered` flag to `zed` and `zq` (#4320)
@@ -185,7 +186,7 @@
 * Use `zng.` prefix for ZNG-related flags in `zed` and `zq` (#4336)
 * Fix an issue where type decorators of union values were leaking into CSV output (#4338)
 
-## v1.4.0
+## [v1.4.0](https://github.com/brimdata/super/commit/ab7157a3bd110b7276bd616f5ad350ff8bf74509)
 * The ZST format is now called [VNG](https://zed.brimdata.io/docs/formats/vng) (#4256)
 * Allow loading of "line" format over the lake API (#4229)
 * Allow loading of Parquet format over the lake API (#4235)
@@ -198,7 +199,7 @@
 * Add support for [user defined functions](https://zed.brimdata.io/docs/language/statements#func-statements) (UDFs) to the Zed language (#4264)
 * Add journal snapshots, significantly improving performance when a pool contains many small commits (#4274)
 
-## v1.3.0
+## [v1.3.0](https://github.com/brimdata/super/commit/c3884647efd6d29dd07ae55188daef5638260a9a)
 * Optimize performance of filters on pool key fields (#3930)
 * Improve handling of errors during [shaping](https://zed.brimdata.io/docs/language/shaping) (#4067, #4069)
 * Allow use of a pool name regexp/glob pattern with the [`from` operator](https://zed.brimdata.io/docs/language/operators/from) (#4072, #4075)
@@ -209,7 +210,7 @@
 * Add `line` format for sourcing newline-delimited input as strings (#4175)
 * Add [`collect_map()` aggregation function](https://zed.brimdata.io/docs/language/aggregates/collect_map) for constructing [maps](https://zed.brimdata.io/docs/formats/zed#24-map) #4173
 
-## v1.2.0
+## [v1.2.0](https://github.com/brimdata/super/commit/76f0409f96a0208d15c4487505604cf6c0e2ae92)
 * Compress index values (#3974)
 * Replace `-znglz4blocksize` flag with `-zngcompress` and `-zngframethresh` for `zed` and `zq` (#3967)
 * Add `-splitsize` flag to `zed` and `zq` (#3957)
@@ -225,7 +226,7 @@
 * Support the indexing operation on sets (#3908)
 * Add `nullsMax` argument to [`compare() function`](https://zed.brimdata.io/docs/language/functions/compare) (#3898)
 
-## v1.1.0
+## [v1.1.0](https://github.com/brimdata/super/commit/c68a120d0c9d696cdd55241fe4569f3fa112f866)
 
 * Allow `-configdir`, `-lake`, `-q`, and `-use` flags before `zed` subcommands (#3852)
 * Add [`assert` operator](https://zed.brimdata.io/docs/language/operators/assert) (#3858)
@@ -239,7 +240,7 @@
 * Allow base62 object IDs in lake API request bodies (#3783)
 * Remove `let` operator and [`over` operator](https://zed.brimdata.io/docs/language/operators/over)'s `as` clause (#3785)
 
-## v1.0.0
+## [v1.0.0](https://github.com/brimdata/super/commit/2cc33836b61dc10d7a1988e3381b09e7b7c2e1ff)
 
 * Comprehensive [documentation](https://zed.brimdata.io/docs)
 * Substantial improvements to the [Zed language](https://zed.brimdata.io/docs/language)
@@ -248,7 +249,7 @@
 * New version of the [ZNG format](https://zed.brimdata.io/docs/formats/zng) (with read-only support for the previous version)
 * New version of the [ZSON format](https://zed.brimdata.io/docs/formats/zson)
 
-## v0.33.0
+## [v0.33.0](https://github.com/brimdata/super/commit/9aa2ba94496b7809c0a25e8bf55284aa65d98ca3)
 
 * `zapi`: Rename the `ZED_LAKE_HOST` environment variable to `ZED_LAKE` and rename the `-host` flag to `-lake` (#3280)
 * `zq`: Improve ZNG read performance when the command line includes multiple input files (#3282)
@@ -268,7 +269,7 @@
 * `zed lake serve`: Change the default response content encoding to ZSON (#3242)
 * `zapi load`, `zed lake load`: Add the `-meta` flag to embed custom metadata in commits (#3237)
 
-## v0.32.0
+## [v0.32.0](https://github.com/brimdata/super/commit/0594b010324639a68a151a0aec432acd241b2aca)
 
 * Add `create_pool()` and `load()` methods to the [Python client](https://zed.brimdata.io/docs/libraries/python) (#3232)
 * Allow a leading `split` operator (#3230)
@@ -294,7 +295,7 @@
 * Fix a ZSON quoting bug for type value field names (#3154)
 * Allow pool names (in addition to pool IDs) in Zed lake service API paths (#3144)
 
-## v0.31.0
+## [v0.31.0](https://github.com/brimdata/super/commit/674691723c8d9ec171a4bb786f6aee098ed6d621)
 
 * Allow indexes to handle fields containing values of different types (#3141)
 * Improve CSV writer performance (#3137)
@@ -320,7 +321,7 @@
 * Remove `POST /ast` and `POST /search` from the Zed lake service API (#3065)
 * Fix an issue with with record aliases in `drop` (#3064)
 
-## v0.30.0
+## [v0.30.0](https://github.com/brimdata/super/commit/f5024835c57a412755c5332e5202de4bc5e4f215)
 
 As you can see below, there's been many changes since the last Zed GA release!  Highlights include:
 * The introduction of Zed lakes for data storage, which include powerful
@@ -408,7 +409,7 @@ questions.
 * Fix an issue where a single bad cast could cause input processing to halt (#2446)
 * Create the `zed` command with sub-commands like `query` and `api`, but shortcut commands (e.g., `zq`, `zapi`) still remain (#2450, #2465, #2466, #2463, #2624, #2620)
 * Rename `ZAR_ROOT` environment variable to `ZED_LAKE_ROOT` (#2469)
-* Revise the top-level [Zed README](https://github.com/brimdata/zed/blob/v0.30.0/README.md) to reflect reorganization of the repo and new/changed tools (#2461)
+* Revise the top-level [Zed README](https://github.com/brimdata/zed/tree/f5024835c57a412755c5332e5202de4bc5e4f215/README.md) to reflect reorganization of the repo and new/changed tools (#2461)
 * Remove the `-P` flag from `zq` in favor of using `from` in the Zed language (#2491)
 * Add casting of the `net` data type (#2493, #2496)
 * `zq` now reads its inputs sequentially rather than the prior merged behavior (#2492)
@@ -498,7 +499,7 @@ questions.
 * The ZST format has been updated to work for typedef'd outer records (#3047)
 * Fix an issue where an empty string could not be output as a JSON field name (#3054)
 
-## v0.29.0
+## [v0.29.0](https://github.com/brimdata/super/commit/db76d01008af00888cee7cd69c4215138f0c0ef5)
 * zqd: Update Zeek pointer to [v3.2.1-brim10](https://github.com/brimdata/zeek/releases/tag/v3.2.1-brim10) which provides the latest [geolocation](https://github.com/brimdata/brim/wiki/Geolocation) data (#2081)
 * zql: Add shaping primitive functions `cast()`, `fill()`, `crop()`, and `order()`, along with `fit()` and `shape()` (#1984, #2059, #2073, #2033)
 * ZSON: Read ZSON incrementally rather than all at once (#2031)
@@ -513,7 +514,7 @@ questions.
 * ZSON: Fix an issue where reading ZSON caused the failure `parse error: mismatched braces while parsing record type` (#2058)
 * ZSON: Fix an issue where casting `null` values to string types caused invalid output (#2077)
 
-## v0.28.0
+## [v0.28.0](https://github.com/brimdata/super/commit/10b0e2c0672413f0b788489809b19e762d1cb963)
 **NOTE** - Beginning with this release, a subset of the source code in the
 [github.com/brimdata/zed](https://github.com/brimdata/zed) GitHub repository is
 covered by a source-available style license, the
@@ -535,7 +536,7 @@ the source-available Polyform Perimeter license on portions of the source code
 lets us realize both.
 
 For more detail regarding licensing, see the
-[CONTRIBUTING.md](https://github.com/brimdata/super/blob/v0.28.0/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/brimdata/super/blob/main/CONTRIBUTING.md)
 doc, and feel free to come talk to us on
 [Slack](https://www.brimdata.io/join-slack/) if you have additional
 questions.
@@ -549,12 +550,12 @@ questions.
 * zq: Fix an issue where the presence of the Greek µ character caused a ZSON read parsing error (#1967)
 * zqd: Fix an issue where Zeek events generated during pcap import and written to an archivestore were only visible after ingest completion (#1973)
 * zqd: Change the logger configuration to output stacktraces on messages of level "warn" and higher (#1990)
-* zq: Update [performance results](https://github.com/brimdata/zed/tree/v0.28.0/performance#README.md) to include ZSON read/write (#1974)
+* zq: Update [performance results](https://github.com/brimdata/zed/tree/10b0e2c0672413f0b788489809b19e762d1cb963/performance#README.md) to include ZSON read/write (#1974)
 
-## v0.27.1
+## [v0.27.1](https://github.com/brimdata/super/commit/e5a8cf5988956a2709fc9fc43569f55ec3eab74b)
 * zq: Fix an issue where nested nulls caused a panic in CSV output (#1954)
 
-## v0.27.0
+## [v0.27.0](https://github.com/brimdata/super/commit/5384e7865732f5c58972facadb951a2e824fa318)
 * zqd: Update Zeek pointer to [v3.2.1-brim8](https://github.com/brimdata/zeek/releases/tag/v3.2.1-brim8) which provides the latest [geolocation](https://github.com/brimdata/brim/wiki/Geolocation) data (#1928)
 * ZSON: Allow characters `.` and `/` in ZSON type names, and fix an issue when accessing fields in aliased records (#1850)
 * ZSON: Add a ZSON marshaler and clean up the ZNG marshaler (#1854)
@@ -569,7 +570,7 @@ questions.
 * zq: Fix an issue where a top-level field in a Zeek TSV log was incorrectly read into a nested record (#1930)
 * zq: Fix an issue where files could not be opened from Windows UNC paths (#1929)
 
-## v0.26.0
+## [v0.26.0](https://github.com/brimdata/super/commit/fc90da422f847cff90c15cc3aa4763a183de4b38)
 * zqd: Update Zeek pointer to [v3.2.1-brim7](https://github.com/brimdata/zeek/releases/tag/v3.2.1-brim7) which provides the latest [geolocation](https://github.com/brimdata/brim/wiki/Geolocation) data (#1855)
 * zq: Improve the error message shown when row size exceeds max read buffer (#1808)
 * zqd: Remove `listen -pprof` flag (profiling data is now always made available) (#1800)
@@ -580,7 +581,7 @@ questions.
 * zqd: Send a warning when unknown fields are encountered in NDJSON logs generated from pcap ingest (i.e. Suricata) (#1847)
 * zq: Add NDJSON typing configuration for the Suricata "vlan" field (#1851)
 
-## v0.25.0
+## [v0.25.0](https://github.com/brimdata/super/commit/05b6f80f9a4c36fabd1bf5ef29cee3bf903f1cc1)
 * zqd: Update Zeek pointer to [v3.2.1-brim6](https://github.com/brimdata/zeek/releases/tag/v3.2.1-brim6) which provides the latest [geolocation](https://github.com/brimdata/brim/wiki/Geolocation) data (#1795)
 * zqd: Update Suricata pointer to [v5.0.3-brimpre2](https://github.com/brimdata/build-suricata/releases/tag/v5.0.3-brimpre2) to generate alerts for imported pcaps (#1729)
 * zqd: Make some columns more prominent (moved leftward) in Suricata alert records (#1749)
@@ -595,7 +596,7 @@ questions.
 * zql: Add a new `pick` operator, which acts like a stricter [`cut`](https://zed.brimdata.io/docs/language/operators/cut) (#1773, #1788)
 * zqd: Improve performance when listing Spaces via the API (#1779, #1786)
 
-## v0.24.0
+## [v0.24.0](https://github.com/brimdata/super/commit/a144052aeff2bd6a79146dba4756431fdfddc7bd)
 * zq: Update Zeek pointer to [v3.2.1-brim5](https://github.com/brimdata/zeek/releases/tag/v3.2.1-brim5) which provides the latest [geolocation](https://github.com/brimdata/brim/wiki/Geolocation) data (#1713)
 * zql: For functions, introduce "snake case" names and deprecate package syntax (#1575, #1609)
 * zql: Add a `cut()` function (#1585)
@@ -605,7 +606,7 @@ questions.
 * zar: Fix an issue where `zar zq` yielded incorrect event counts compared to plain `zq` (#1588, #1602)
 * zq: Fix a memory bug in `collect()` that caused incorrect results (#1598)
 * zqd: Support log imports over the network (#1336)
-* zq: Update [performance results](https://github.com/brimdata/zed/tree/v0.24.0/performance#README.md) to reflect recent improvements (#1605, #1669, #1671)
+* zq: Update [performance results](https://github.com/brimdata/zed/tree/a144052aeff2bd6a79146dba4756431fdfddc7bd/performance#README.md) to reflect recent improvements (#1605, #1669, #1671)
 * zq: Move Zeek & Suricata dependencies into `package.json` so Brim can point to them also (#1607, #1610)
 * zql: Add support for [aggregation-less group by](https://zed.brimdata.io/docs/language/operators/summarize) (#1615, #1623)
 * zqd: Run `suricata-update` at startup when Suricata pcap analysis is enabled (#1586)
@@ -626,7 +627,7 @@ questions.
 * zql: Add a `network_of()` function for mapping IP addresses to CIDR nets (#1700)
 * zql: Add a [docs example](https://zed.brimdata.io/docs/language/operators/summarize) showing `by` grouping with non-present fields (#1703)
 
-## v0.23.0
+## [v0.23.0](https://github.com/brimdata/super/commit/78762bb069a1662eb4b2cf9a0c57740dfc2c59d4)
 * zql: Add `week` as a unit for [time grouping with `every`](https://zed.brimdata.io/docs/language/functions/every) (#1374)
 * zq: Fix an issue where a `null` value in a [JSON type definition](https://zed.brimdata.io/docs/integrations/zeek) caused a failure without an error message (#1377)
 * zq: Add [`zst` format](https://zed.brimdata.io/docs/formats/vng) to `-i` and `-f` command-line help (#1384)
@@ -676,7 +677,7 @@ questions.
 * zapi: Add a `-stats` option to `zapi pcappost` (#1538)
 * zqd: Add a Python `zqd` API client for use with tools like [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) (#1564)
 
-## v0.22.0
+## [v0.22.0](https://github.com/brimdata/super/commit/d73171bb7aeb00573c46d75f2b0819a05edfc674)
 * zq: Change the implementation of the `union` type to conform with the [ZNG spec](https://zed.brimdata.io/docs/formats/zng#3114-union-typedef) (#1245)
 * zq: Make options/flags and version reporting consistent across CLI tools (#1249, #1254, #1256, #1296, #1323, #1334, #1328)
 * zqd: Fix an issue that was preventing flows in nanosecond pcaps from opening in Brim (#1243, #1241)
@@ -704,7 +705,7 @@ questions.
 * zq: Fix an issue where interrupted aggregations could leave behind temporary files (#1357)
 * zng: Add a marshaler to generate ZNG streams from native Go values (#1327)
 
-## v0.21.0
+## [v0.21.0](https://github.com/brimdata/super/commit/f6ae6099c913e53d96b3667a4a2ea788d0850483)
 * zq: Improve performance by making fewer API calls in S3 reader (#1191)
 * zq: Use memory more efficiently by reducing allocations (#1190, #1201)
 * zqd: Fix an issue where a pcap moved/deleted after import caused a 404 response and white screen in Brim (#1198)
@@ -721,7 +722,7 @@ questions.
 * zar: Add a `-sortmem` flag to allow `zar import` to use more memory to improve performance (#1203)
 * zqd: Fix an issue where file paths containing URI escape codes could not be opened in Brim (#1238)
 
-## v0.20.0
+## [v0.20.0](https://github.com/brimdata/super/commit/cae3cca70957b7d656bf6a28a1113cc1468af1d1)
 * zqd: Publish initial docs for running `zqd` in Kubernetes (#1101)
 * zq: Provide a better error message when an invalid IP address is parsed (#1106)
 * zar: Use single files for microindexes (#1110)
@@ -738,13 +739,13 @@ questions.
 * zqd: Add a hidden `-brimfd` flag to `zqd listen` so that `zqd` can close gracefully if Brim is terminated abruptly (#1184)
 * zar: Perform `zar zq` queries concurrently where possible (#1165, #1145, #1138, #1074)
 
-## v0.19.1
+## [v0.19.1](https://github.com/brimdata/super/commit/10f42e6703a91b0ca9587323ab28e3f5dbcc7282)
 
 * zq: Move third party license texts in this repository to a single [acknowledgments.txt](https://github.com/brimdata/zed/blob/main/acknowledgments.txt) file (#1107)
 * zq: Automatically load AWS config from shared config file `~/.aws/config` by default (#1109)
 * zqd: Fix an issue with excess characters in Space names after upgrade (#1112)
 
-## v0.19.0
+## [v0.19.0](https://github.com/brimdata/super/commit/6b23d638f1157210344c631e0b37d51d9d44be7f)
 * zq: ZNG output is now LZ4-compressed by default (#1050, #1064, #1063, [ZNG spec](https://zed.brimdata.io/docs/formats/zng#313-compressed-value-message-block))
 * zar: Adjust import size threshold to account for compression (#1082)
 * zqd: Support starting `zqd` with datapath set to an S3 path (#1072)
@@ -754,16 +755,16 @@ questions.
 * zq: Update help text for `zar` commands to mention S3, and other improvements (#1094)
 * pcap: Fix an out-of-memory issue during import of very large pcaps (#1096)
 
-## v0.18.0
+## [v0.18.0](https://github.com/brimdata/super/commit/240df323b51d38a0a184331ee4be25673e281eef)
 * zql: Fix an issue where data type casting was not working in Brim (#1008)
 * zql: Add a new [`rename` operator](https://zed.brimdata.io/docs/language/operators/rename) to rename fields in a record (#998, #1038)
 * zqd: Fix an issue where API responses were being blocked in Brim due to commas in Content-Disposition headers (#1014)
 * zq: Improve error messaging on S3 object-not-found (#1019)
 * zapi: Fix an issue where `pcappost` run with `-f` and an existing Space name caused a panic (#1042)
 * zqd: Add a `-prometheus` option to add [Prometheus](https://prometheus.io/) metrics routes the API (#1046)
-* zq: Update [README](https://github.com/brimdata/super/blob/v0.18.0/README.md) and add docs for more command-line tools (#1049)
+* zq: Update [README](https://github.com/brimdata/super/tree/240df323b51d38a0a184331ee4be25673e281eef/README.md) and add docs for more command-line tools (#1049)
 
-## v0.17.0
+## [v0.17.0](https://github.com/brimdata/super/commit/4110704115a9e569e1492d28b579fa03e72e7b0c)
 * zq: Fix an issue where the inferred JSON reader crashed on multiple nested fields (#948)
 * zq: Introduce spill-to-disk groupby for performing very large aggregations (#932, #963)
 * zql: Use syntax `c=count()` instead of `count() as c` for naming the field that holds the value returned by an aggregate function (#950)
@@ -774,7 +775,7 @@ questions.
 * zq: Fix an issue where spurious type IDs were being created (#964)
 * zql: Support renaming a field via the `cut` operator (#969)
 
-## v0.16.0
+## [v0.16.0](https://github.com/brimdata/super/commit/c67c46d4fc14516b4ae263442fc830f08317b4d6)
 * zng: Readability improvements in the [ZNG specification](https://zed.brimdata.io/docs/formats/zng) (#897, #910, #917)
 * zq: Support directory output to S3 (#898)
 * zql: Group-by no longer emits records in "deterministic but undefined" order (#914)
@@ -784,7 +785,7 @@ questions.
 * zql: Clarify [`cut` operator documentation](https://zed.brimdata.io/docs/language/operators/cut) (#924)
 * zqd: Fix an issue where an invalid 1970 Space start time could be created in Brim during pcap import (#938)
 
-## v0.15.0
+## [v0.15.0](https://github.com/brimdata/super/commit/ea81bd973b8520c2fc44da742b64817ae8b387e1)
 * pcap: Report more detailed error information (#844)
 * zql: Add a new function `Time.trunc()` (#842)
 * zql: Support grouping by computed keys (#860)
@@ -793,7 +794,7 @@ questions.
 * zql: Change `cut` operator to emit any matching fields (#899)
 * zq: Allow output to an S3 bucket (#889)
 
-## v0.14.0
+## [v0.14.0](https://github.com/brimdata/super/commit/b071817e97e51d2a250f4d86de2bc49460edf506)
 * zq: Add support for reading from S3 buckets (#733, #780, #783)
 * zq: Add initial support for reading Parquet files (only via `-i parquet`, no auto-detection) (#736, #754, #774, #780, #782, #820, #813, #830, #825, #834)
 * zq: Fix an issue with reading/writing recursively-nested NDJSON events (#748)
@@ -814,11 +815,11 @@ questions.
 * zql: Introduce time conversion functions (#822)
 * zq: Ensure Spaces have non-blank names (#826)
 
-## v0.13.1
+## [v0.13.1](https://github.com/brimdata/super/commit/647db0d727cfb26b2467538b67e44f109b2239a0)
 * zq: Fix an issue with stream reset that was preventing the pcap button in Brim from activating (#725)
 * zql: Allow multiple fields to be written from `put` operator (#697)
 
-## v0.13.0
+## [v0.13.0](https://github.com/brimdata/super/commit/8d1ef0b6ab2532e954f6086b66516c6b8b6d9c7c)
 * zqd: Enable time indexing to provide faster query response in narrower time ranges (#647)
 * zql: Make ipv4 subnet bases contain 4 octets to remove ambiguity between fractions & CIDR (#670)
 * zq: Use an external sort for large inputs (removes the 10-million line `sort` limit) (#527)
@@ -827,31 +828,31 @@ questions.
 * zq: Support recursive record nesting in Zeek reader/writer (#715)
 * zqd: Zeek log import support needed for Brim (#616, #517, #608, #592, #592, #582, #709)
 
-## v0.12.0
+## [v0.12.0](https://github.com/brimdata/super/commit/649d9a61a09658fb269d1d8bf56dfe1198e6ee4c)
 * zql: Introduce `=~` and `!~` operators in filters for globs, regexps, and matching addresses against subnets (#604, #620)
 * zq: When input auto-detect fails, include each attempted format's error (#616)
 * zng: Binary format is now called "ZNG" and text format is called "TZNG" ("BZNG" has been retired) (#621, #630, #656)
 * zql: `cut` now has a `-c` option to show all fields _not_ in the provided list (#639, #655)
 * zq: Make `-f zng` (binary ZNG) the default `zq` output format, and introduce `-t` as shorthand for `-f tzng` (#654)
 
-## v0.11.1
+## [v0.11.1](https://github.com/brimdata/super/commit/078497799f634db727954d28b8cc7e90ec31c15b)
 * zqd: Send HTTP status 200 for successful pcap search (#605)
 
-## v0.11.0
+## [v0.11.0](https://github.com/brimdata/super/commit/961b318ba5d62edd602320b2f9861284fb5a6434)
 * zql: Improve string search matching on field names (#570)
 * pcap: Better handling of empty results (#572)
 * zq: Introduce `-e` flag to allow for continued reads during input errors (#577)
 * pcap: Allow reading of pcap files that have a capture length that exceeds the original length of the packet (#584)
 * zqd: Fix an issue that was causing the histogram to draw incorrectly in Brim app (#602)
 
-## v0.10.0
+## [v0.10.0](https://github.com/brimdata/super/commit/45d680ff479a2496fa5ef3e5d20d358397d391f1)
 
 * zql: Let text searches match field names as well as values (#529)
 * zql: Fix an issue where ZQL queries exceeding 255 chars caused a crash (#543)
 * zql: Make searches case-insensitive by default (#536)
 * Fix an issue where the Zeek reader failed to read whitespace from the rightmost column (#552)
 
-## v0.9.0
+## [v0.9.0](https://github.com/brimdata/super/commit/28f78f150391565f09e003d75e70d71807adc331)
 
 * zql: Emit warnings from `put` operator (#477)
 * zql: Add string functions (#475)
@@ -861,7 +862,7 @@ questions.
 * zqd: Make http shutdown more graceful (#500)
 * zqd: Make space deletion cancel and await other operations (#451)
 
-## v0.8.0
+## [v0.8.0](https://github.com/brimdata/super/commit/a3e54c2940fb88bd918298b13e49e81b69e8cc60)
 
 * zql: add the `put` operator that adds or updates fields using a computed
   expression. (#437)
@@ -870,13 +871,13 @@ questions.
 * zq: support reading ndjson with user supplied type information. (#441)
 * Fix an issue reading pcaps with snaplen=0. (#462)
 
-## v0.7.0
+## [v0.7.0](https://github.com/brimdata/super/commit/6e33d6be350422359c727af200168ee03973c142)
 
 * Address ingest issues for packet captures in legacy pcap format.
 * Calculate and respond with packet capture time range at the start of ingest,
   so that Brim can immediately display the space's time range.
 
-## v0.6.0
+## [v0.6.0](https://github.com/brimdata/super/commit/0db4ff7ba6a522d87ca18e1d0f857cdc67c15127)
 
 * zq now displays warnings by default; the "-W" flag is removed, replaced by
   the "-q" for quieting warnings.
@@ -884,25 +885,25 @@ questions.
 * Address ingest issues for some pcapng packet captures.
 * Address ingest issues for file or path names that require uri encoding.
 
-## v0.5.0
+## [v0.5.0](https://github.com/brimdata/super/commit/87a6f203243a6fb7cf3628728573d8d205eca730)
 
 * Support search queries during pcap ingestion.
 * Improved error reporting in zqd, especially during pcap ingestion.
 * Improved performance of space info api.
 * zqd supports ingesting pcapng formatted packet capture files.
 
-## v0.4.0
+## [v0.4.0](https://github.com/brimdata/super/commit/c7e7ae76b8884e87ac954de90cb0688ebb999de5)
 
 * zqd adds an endpoint to create a new empty space via post
 * zqd adds an endpoint to post packet captures that are indexed and turned into Zeek logs
 
-## v0.3.0
+## [v0.3.0](https://github.com/brimdata/super/commit/501472372c6970f2ae05619d9754de4f666adcce)
 
 * zqd adds -datadir flag for space root directory.
 * zqd adds -version flag.
 * Add pcap command to interact with packet capture files.
 
-## v0.2.0
+## [v0.2.0](https://github.com/brimdata/super/commit/7bb4140a4224d3f3d6b76b01cc099e24c5507ecc)
 
 * Per-platform binaries will be available as Github release assets.
 * zql examples under zql/docs are now verified via `make test-heavy`.
@@ -910,13 +911,13 @@ questions.
 * Internal integer types now match the ZNG specification.
 * Fixed comparisons of aliased types.
 
-## v0.1.0
+## [v0.1.0](https://github.com/brimdata/super/commit/cb194ebe3b0dac0084569e6a7c1c4d6dce2d263b)
 
 * zq moves from github.com/mccanne/zq to github.com/brimdata/zed.
 * Parser and AST moved to this repository from github.com/looky-cloud/lookytalk.
 * Query language name changed to ZQL.
 * ZNG specification added.
 
-## v0.0.1
+## [v0.0.1](https://github.com/brimdata/super/commit/5fc47f71c7f9b130c3bcd4a2d377735349fd39a9)
 
 * Initial release of zq.
